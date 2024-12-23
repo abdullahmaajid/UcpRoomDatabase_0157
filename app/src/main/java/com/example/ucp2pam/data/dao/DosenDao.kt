@@ -6,6 +6,11 @@ import androidx.room.Query
 import com.example.ucp2pam.data.entity.Dosen
 import kotlinx.coroutines.flow.Flow
 
+
+/////
+// MENGELOLA OPERASI YANG DILAKUKAN ENTITY DOSEN
+/////
+
 @Dao
 interface DosenDao {
     @Insert

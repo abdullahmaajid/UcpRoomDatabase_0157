@@ -1,6 +1,8 @@
 package com.example.ucp2pam.ui.navigation
 
-
+/////
+// MENDEFINISIKAN OBJEK-OBJEK YANG MEWAKILI RUTE NAVIGASI
+/////
 
 interface AlamatNavigasi {
     val route: String

@@ -3,6 +3,11 @@ package com.example.ucp2pam.repository
 import com.example.ucp2pam.data.entity.Dosen
 import kotlinx.coroutines.flow.Flow
 
+
+
+/////
+//MENDEFINISIKAN FUNGSI
+/////
 interface RepositoryDosen {
     suspend fun insertDosen(dosen: Dosen)
 

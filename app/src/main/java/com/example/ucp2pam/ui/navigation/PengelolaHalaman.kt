@@ -19,6 +19,10 @@ import com.example.ucp2pam.ui.view.matakuliah.InsertMkView
 import com.example.ucp2pam.ui.view.matakuliah.UpdateMkViewModel
 import com.example.ucp2pam.ui.viewmodel.matakuliah.UpdateMkViewModel
 
+/////
+// MENGATUR NAVIGASI ANTAR HALAMAN
+/////
+
 @Composable
 fun PengelolaHalaman(
     navController: NavHostController = rememberNavController(),

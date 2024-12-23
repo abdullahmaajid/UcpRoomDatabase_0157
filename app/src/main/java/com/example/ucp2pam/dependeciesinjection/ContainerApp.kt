@@ -9,6 +9,11 @@ import com.example.ucp2pam.repository.LocalRepositoryMataKuliah
 import com.example.ucp2pam.repository.RepositoryDosen
 import com.example.ucp2pam.repository.RepositoryMataKuliah
 
+
+/////
+// MENYEDIAKAN AKSES KE REPOSITORI DOSEN DAN MATA KULIAH
+/////
+
 interface InterfaceContainerApp {
     val RepositoryDosen: RepositoryDosen
     val RepositoryMataKuliah: RepositoryMataKuliah

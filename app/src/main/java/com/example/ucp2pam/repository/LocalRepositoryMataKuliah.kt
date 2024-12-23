@@ -4,6 +4,10 @@ import com.example.ucp2pam.data.dao.MataKuliahDao
 import com.example.ucp2pam.data.entity.MataKuliah
 import kotlinx.coroutines.flow.Flow
 
+/////
+//MENGOLAH DATA MATA KULIAH DENGAN OPERASI-OPERASI
+/////
+
 class LocalRepositoryMataKuliah(
     private val mataKuliahDao: MataKuliahDao
 ) : RepositoryMataKuliah {

@@ -3,6 +3,7 @@ package com.example.ucp2pam.repository
 import com.example.ucp2pam.data.entity.MataKuliah
 import kotlinx.coroutines.flow.Flow
 
+//MENDEFINISIKAN FUNGSI
 interface RepositoryMataKuliah {
         suspend fun insertMataKuliah(matakuliah: MataKuliah)
 

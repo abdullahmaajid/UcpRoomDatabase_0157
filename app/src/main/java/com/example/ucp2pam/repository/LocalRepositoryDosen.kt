@@ -4,6 +4,11 @@ import com.example.ucp2pam.data.dao.DosenDao
 import com.example.ucp2pam.data.entity.Dosen
 import kotlinx.coroutines.flow.Flow
 
+
+/////
+//MENGOLAH DATA DOSEN DENGAN OPERASI-OPERASI
+/////
+
 class LocalRepositoryDosen(
     private val dosenDao: DosenDao
 ) : RepositoryDosen {
