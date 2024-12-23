@@ -8,31 +8,28 @@ class LocalRepositoryMataKuliah(
     private val mataKuliahDao: MataKuliahDao
 ) : RepositoryMataKuliah {
 
-    override suspend fun insertMataKuliah(mataKuliah: MataKuliah) {
-        mataKuliahDao.insertMataKuliah(mataKuliah)
+    // Menambahkan mata kuliah baru
+    override suspend fun insertMataKuliah(matakuliah: MataKuliah) {
+        mataKuliahDao.insertMataKuliah(matakuliah)
     }
 
+    // Mendapatkan semua mata kuliah
     override fun getAllMataKuliah(): Flow<List<MataKuliah>> {
         return mataKuliahDao.getAllMataKuliah()
     }
 
-    override fun getMataKuliah(kode: String): Flow<MataKuliah> {
-        return mataKuliahDao.getMataKuliah(kode)
+    // Mengupdate mata kuliah
+    override suspend fun updateMataKuliah(matakuliah: MataKuliah) {
+        mataKuliahDao.updateMataKuliah(matakuliah)
     }
 
-    override fun getMataKuliahBySemester(semester: Int): Flow<List<MataKuliah>> {
-        return mataKuliahDao.getMataKuliahBySemester(semester)
+    // Menghapus mata kuliah
+    override suspend fun deleteMataKuliah(matakuliah: MataKuliah) {
+        mataKuliahDao.deleteMataKuliah(matakuliah)
     }
 
-    override fun getMataKuliahByDosen(dosenPengampu: String): Flow<List<MataKuliah>> {
-        return mataKuliahDao.getMataKuliahByDosen(dosenPengampu)
-    }
-
-    override suspend fun deleteMataKuliah(mataKuliah: MataKuliah) {
-        mataKuliahDao.deleteMataKuliah(mataKuliah)
-    }
-
-    override suspend fun updateMataKuliah(mataKuliah: MataKuliah) {
-        mataKuliahDao.updateMataKuliah(mataKuliah)
+    // Mendapatkan detail mata kuliah berdasarkan kode
+    override fun getDetailMataKuliah(kode: String): Flow<MataKuliah> {
+        return mataKuliahDao.getDetailMataKuliah(kode)
     }
 }
