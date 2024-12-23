@@ -3,13 +3,13 @@ package com.example.ucp2pam.data.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "mata_kuliah")
+@Entity (tableName = "matakuliah")
 data class MataKuliah(
     @PrimaryKey
-    val kode: String,
-    val nama: String,
-    val sks: Int,
-    val semester: Int,
-    val jenis: String,
-    val dosenPengampu: String
+    val kode : String,
+    val nama : String,
+    val sks : String,
+    val semester : String,
+    val jenis : String,
+    val dosenPengampu : String
 )
