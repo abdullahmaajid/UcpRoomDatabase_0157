@@ -1,5 +1,7 @@
 package com.example.ucp2pam.data.dao
 
+
+
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -10,25 +12,18 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MataKuliahDao {
-
     @Insert
-    suspend fun insertMataKuliah(mataKuliah: MataKuliah)
+    suspend fun insertMataKuliah(matakuliah: MataKuliah)
 
-    @Query("SELECT * FROM mata_kuliah ORDER BY nama ASC")
+    @Query("SELECT * FROM matakuliah")
     fun getAllMataKuliah(): Flow<List<MataKuliah>>
 
-    @Query("SELECT * FROM mata_kuliah WHERE kode = :kode")
-    fun getMataKuliah(kode: String): Flow<MataKuliah>
-
-    @Query("SELECT * FROM mata_kuliah WHERE semester = :semester ORDER BY nama ASC")
-    fun getMataKuliahBySemester(semester: Int): Flow<List<MataKuliah>>
-
-    @Query("SELECT * FROM mata_kuliah WHERE dosenPengampu = :dosenPengampu ORDER BY nama ASC")
-    fun getMataKuliahByDosen(dosenPengampu: String): Flow<List<MataKuliah>>
+    @Update
+    suspend fun updateMataKuliah(matakuliah: MataKuliah)
 
     @Delete
-    suspend fun deleteMataKuliah(mataKuliah: MataKuliah)
+    suspend fun deleteMataKuliah(matakuliah: MataKuliah)
 
-    @Update
-    suspend fun updateMataKuliah(mataKuliah: MataKuliah)
+    @Query("SELECT * FROM matakuliah WHERE kode = :kode")
+    fun getDetailMataKuliah(kode: String): Flow<MataKuliah>
 }
