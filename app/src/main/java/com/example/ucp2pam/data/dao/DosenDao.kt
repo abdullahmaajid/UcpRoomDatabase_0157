@@ -1,20 +1,17 @@
 package com.example.ucp2pam.data.dao
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Update
 import com.example.ucp2pam.data.entity.Dosen
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface DosenDao {
-
     @Insert
     suspend fun insertDosen(dosen: Dosen)
 
-    @Query("SELECT * FROM dosen ORDER BY nama ASC")
+    @Query("SELECT * FROM dosen")
     fun getAllDosen(): Flow<List<Dosen>>
 
     @Query("SELECT * FROM dosen WHERE nidn = :nidn")
