@@ -1,40 +1,31 @@
 package com.example.ucp2pam.ui.navigation
 
+
+
 interface AlamatNavigasi {
     val route: String
 }
 
+object HomeRoute : AlamatNavigasi{
+    override val route = "home"
+}
 
-object DestinasiDosenHome : AlamatNavigasi {
+object DestinasiHomeDosen : AlamatNavigasi {
     override val route = "home_dosen"
 }
 
-object DestinasiDosenDetail : AlamatNavigasi {
-    override val route = "detail_dosen"
-    const val NIDN = "nidn"
-    val routeWithArg = "$route/{$NIDN}"
+object DestinasiHomeMataKuliah : AlamatNavigasi {
+    override val route = "home_matakuliah"
 }
 
-object DestinasiDosenUpdate : AlamatNavigasi {
-    override val route = "update_dosen"
-    const val NIDN = "nidn"
-    val routeWithArg = "$route/{$NIDN}"
+object DestinasiDetailMataKuliah : AlamatNavigasi {
+    override val route = "detail_matakuliah"
+    const val KODE_MATAKULIAH = "kode_matakuliah"
+    val routesWithArg = "$route/{$KODE_MATAKULIAH}"
 }
 
-
-object DestinasiMataKuliahHome : AlamatNavigasi {
-    override val route = "home_mata_kuliah"
+object DestinasiUpdateMataKuliah : AlamatNavigasi {
+    override val route = "update_matakuliah"
+    const val KODE_MATAKULIAH = "kode_matakuliah"
+    val routesWithArg = "$route/{$KODE_MATAKULIAH}"
 }
-
-object DestinasiMataKuliahDetail : AlamatNavigasi {
-    override val route = "detail_mata_kuliah"
-    const val KODE = "kode"
-    val routeWithArg = "$route/{$KODE}"
-}
-
-object DestinasiMataKuliahUpdate : AlamatNavigasi {
-    override val route = "update_mata_kuliah"
-    const val KODE = "kode"
-    val routeWithArg = "$route/{$KODE}"
-}
-
